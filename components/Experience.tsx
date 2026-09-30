@@ -5,7 +5,7 @@ import { experience } from "@/data/site";
 
 export function Experience() {
   return (
-    <section id="experience" className="border-t border-white/5 py-28">
+    <div id="experience" className="border-t border-white/5 py-28">
       <Container>
         <SectionHeading
           eyebrow="02 / Experience"
@@ -14,13 +14,15 @@ export function Experience() {
 
         <div className="max-w-5xl">
           <div className="space-y-12">
+            
+            <section id="experience">
             {experience.map((item, index) => (
               <article
                 key={`${item.company}-${item.role}`}
                 className="relative grid gap-5 md:grid-cols-[180px_1fr]"
               >
                 {/* Timeline */}
-                <div className="font-mono text-xs text-zinc-500 md:pt-1">
+                <div className="font-mono text-xs text-zinc-200 md:pt-1">
                   {item.date}
                 </div>
 
@@ -41,10 +43,12 @@ export function Experience() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-4 max-w-3xl leading-7 text-zinc-400">
+                  <div className="binary-safe">
+                  <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
                     {item.description}
                   </p>
-
+                  </div>
+<div className="binary-safe">
                   {/* Technologies */}
                   {item.technologies?.length > 0 && (
                     <div className="mt-6">
@@ -53,11 +57,12 @@ export function Experience() {
                         <span>Technologies</span>
                       </div>
 
+                    
                       <div className="flex flex-wrap gap-2">
                         {item.technologies.map((technology) => (
                           <span
                             key={technology}
-                            className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 font-mono text-[10px] text-zinc-400 transition-all duration-200 hover:border-cyan-300/30 hover:bg-cyan-300/[0.03] hover:text-cyan-300"
+                            className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 font-mono text-[10px] text-zinc-300 transition-all duration-200 hover:border-cyan-300/30 hover:bg-cyan-300/[0.03] hover:text-cyan-300"
                           >
                             {technology}
                           </span>
@@ -65,12 +70,14 @@ export function Experience() {
                       </div>
                     </div>
                   )}
+                    </div>
                 </div>
               </article>
             ))}
+            </section>
           </div>
         </div>
       </Container>
-    </section>
+    </div>
   );
 }

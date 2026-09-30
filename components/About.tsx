@@ -13,19 +13,49 @@ export function About() {
   return (
     <section id="about" className="border-t border-white/5 py-28">
       <Container>
-        <SectionHeading eyebrow="01 / About" title="An engineer who likes understanding the whole system." />
+        <div >
+          <SectionHeading 
+            eyebrow="01 / About"
+            title="An engineer who likes understanding the whole system."
+          />
+        </div>
+
         <div className="grid gap-12 lg:grid-cols-[1.1fr_.9fr]">
-          <div className="space-y-5 text-zinc-400 leading-8">
-            <p>I&apos;m a computer engineering graduate based in Morocco, with hands-on experience building business applications from API to interface.</p>
-            <p>During my PFE at Munisys, I worked on a real-world CRM and SharePoint integration involving authentication, authorization, document management, synchronization, and enterprise data.</p>
-            <p>My current direction combines full-stack development with cloud and DevOps, with the goal of becoming a strong production-oriented software engineer.</p>
+          <div className=" space-y-5 text-zinc-300 leading-8">
+            <p className="binary-safe ">
+              I&apos;m a computer engineering graduate based in Morocco, with
+              hands-on experience building business applications from API to
+              interface.
+            </p>
+
+            <p className="binary-safe ">
+              During my PFE at Munisys, I worked on a real-world CRM and
+              SharePoint integration involving authentication, authorization,
+              document management, synchronization, and enterprise data.
+            </p>
+
+            <p className="binary-safe ">
+              My current direction combines full-stack development with cloud
+              and DevOps, with the goal of becoming a strong production-oriented
+              software engineer.
+            </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+
+          <div className=" grid gap-3 sm:grid-cols-2">
             {cards.map(([Icon, title, text]) => (
-              <div key={title} className="rounded-2xl border border-white/8 bg-white/[.025] p-5">
+              <div 
+                key={title}
+                className="binary-safe rounded-2xl border border-white/8 bg-white/[.025] p-5"
+              >
                 <Icon size={20} className="text-cyan-300" />
-                <h3 className="mt-5 font-medium text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-500">{text}</p>
+
+                <h3 className="binary-safe mt-5 font-medium text-white">
+                  {title}
+                </h3>
+
+                <p className="binary-safe mt-2 text-sm leading-6 text-zinc-400">
+                  {text}
+                </p>
               </div>
             ))}
           </div>

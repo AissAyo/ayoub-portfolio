@@ -22,9 +22,11 @@ export function Projects() {
                 </div>
                 <p className="mt-8 font-mono text-[10px] uppercase tracking-[.18em] text-cyan-300">{project.type}</p>
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">{project.title}</h3>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-400">{project.description}</p>
+               <div className="binary-safe">
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300">{project.description}</p>
+               </div>
                 <div className="mt-auto flex flex-wrap gap-2 pt-7">
-                  {project.stack.map((tech) => <span key={tech} className="rounded-full bg-white/5 px-3 py-1.5 text-[11px] text-zinc-400">{tech}</span>)}
+                  {project.stack.map((tech) => <span key={tech} className="rounded-full bg-white/5 px-3 py-1.5 text-[11px] text-zinc-300">{tech}</span>)}
                 </div>
               </div>
             </motion.article>

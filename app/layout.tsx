@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Ayoub Aissaoui — Junior Full Stack Developer",
@@ -9,7 +10,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="noise">{children}</body>
+      <body className="noise">
+        {children}
+        <Analytics />
+        </body>
     </html>
   );
 }
+

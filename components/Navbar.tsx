@@ -23,18 +23,18 @@ export function Navbar() {
         </a>
         <nav className="hidden items-center gap-7 md:flex">
           {links.map(([label, href]) => (
-            <a key={href} href={`#${href}`} className="text-sm text-zinc-400 transition hover:text-white">{label}</a>
+            <a key={href} href={`#${href}`} className="text-sm text-zinc-300 transition hover:text-white">{label}</a>
           ))}
         </nav>
-        <a href={`mailto:${site.email}`} className="hidden rounded-full border border-white/10 px-4 py-2 text-xs font-medium text-zinc-200 transition hover:border-cyan-300/40 hover:text-cyan-200 md:block">Let&apos;s talk</a>
-        <button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="text-zinc-300 md:hidden">
+        <a href={`mailto:${site.email}`} className="hidden rounded-full border border-white/10 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-cyan-300/40 hover:text-cyan-200 md:block">Let&apos;s talk</a>
+        <button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="text-zinc-100 md:hidden">
           {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
       {open && (
         <motion.nav initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="border-t border-white/5 px-5 py-5 md:hidden">
           {links.map(([label, href]) => (
-            <a key={href} onClick={() => setOpen(false)} href={`#${href}`} className="block py-3 text-sm text-zinc-300">{label}</a>
+            <a key={href} onClick={() => setOpen(false)} href={`#${href}`} className="block py-3 text-sm text-zinc-100">{label}</a>
           ))}
         </motion.nav>
       )}

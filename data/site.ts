@@ -9,11 +9,30 @@ export const site = {
 };
 
 export const skills = [
-  { group: "Backend", items: ["Java", "Spring Boot", "REST APIs", "Symfony", ".NET"] },
-  { group: "Frontend", items: ["React", "TypeScript", "HTML / CSS", "Tailwind CSS"] },
-  { group: "Data", items: ["SQL Server", "PostgreSQL", "MySQL", "JPA / Hibernate"] },
-  { group: "Cloud & DevOps", items: ["Docker", "Git", "Jenkins", "Ansible", "SonarQube", "Azure / AWS"] },
-  { group: "Security", items: ["JWT", "OAuth2", "Microsoft Entra ID", "RBAC"] },
+  {
+    group: "Backend",
+    items: ["Java", "Spring Boot", "REST APIs", "Symfony", ".NET"],
+  },
+  {
+    group: "Frontend",
+    items: ["React", "TypeScript", "HTML / CSS", "Tailwind CSS"],
+  },
+  {
+    group: "Data",
+    items: ["SQL Server", "PostgreSQL", "MySQL", "JPA / Hibernate"],
+  },
+  {
+    group: "Cloud & DevOps",
+    items: ["Docker", "Git", "Jenkins", "Ansible", "SonarQube", "Azure / AWS"],
+  },
+  {
+    group: "Security",
+    items: ["JWT", "OAuth2", "Microsoft Entra ID", "RBAC"],
+  },
+  {
+    group: "Architecture",
+    items: ["MVC", "SOLID", "Microservices", "ORM", "OOP"],
+  },
 ];
 
 export const projects = [
