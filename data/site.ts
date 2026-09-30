@@ -5,7 +5,7 @@ export const site = {
   email: "ayoub.aissaoui.dev@gmail.com",
   github: "https://github.com/AissAyo",
   linkedin: "https://www.linkedin.com/in/ayoub-aissaoui-0aba3b324/",
-  cv: "/Cv_AyoubAissaouiJavaFr.pdf",
+  cv: "/CV_AyoubAissaouiJavaFr.pdf",
 };
 
 export const skills = [
